@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* リセット */
+a{
+    text-decoration: none;  
+}
+ul{
+    list-style: none;
+}
+
+/* 共通部分 */
+body{
+    color: #333;
+}
+main{
+    letter-spacing: 0.03em;
+}
+footer{
+    letter-spacing: 0.05em;
+}
+
+/* ヘッダー固定 */
+.header_for_pc{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: hsla(0, 0%, 100%, 0.739);
+}
+/* ヘッダー部分 */
+.logo{
+    height: 90px;
+}
+.logo img{
+    height: 90px;
+    width: auto;
+}
+.header_for_pc{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header_nav li{
+    margin-left: 24px;
+}
+.header_nav a{
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+.header_nav a:hover{
+    color: #fb9300;
+}
+.header_nav li:first-child{
+    margin-left: 0;
+}
+
+/* メイン部分 */
+main{
+    line-height: 180%;
+}
+.policy .contents{
+    padding: 200px 20px;
+}
+.contents_intro{
+    margin-bottom: 100px;
+}
+.contents_intro h2{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    text-align: center;
+}
+.contents_text{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.contents_text li{
+    margin-bottom: 38px;
+}
+.contents_text li p:nth-child(1){
+    font-size: 24px;
+    margin-bottom: 0.4em;
+}
+.contents_text>p{
+    margin-bottom: 38px;
+}
+.contents_text p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+
+/* footer部分 */
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 40px 100px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.footer a{
+    margin-right: 24px;
+    font-size: 14px;
+    color: #333;
+}
+.footer p{
+    font-size: 12px;
+}
+
+/* レスポンシブ対応********************************************************************** */
+/* SP */
+@media screen and (max-width: 519px) {
+/* ヘッダー部分 */
+.logo{
+    height: 60px;
+}
+.logo img{
+    height: 60px;
+}
+.header_for_pc{
+    height: 70px;
+    margin: 0 20px;
+}
+.header_nav{
+    display: none;
+}
+
+/* メイン部分 */
+.policy .contents{
+    padding: 150px 20px 80px;
+}
+.contents_intro{
+    margin-bottom: 40px;
+}
+.contents_intro h2{
+    font-size: 20px;
+}
+.contents_text li{
+    margin-bottom: 36px;
+}
+.contents_text li p:nth-child(1){
+    margin-bottom: 0.3em;
+    font-size: 20px;
+}
+.contents_text>p{
+    margin-bottom: 36px;
+}
+.contents_text p{
+    font-size: 16px;
+}
+
+/* footer部分 */
+.footer{
+    display: block;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.footer a{
+    text-align: right;
+    padding: 32px 20px;
+    margin-bottom: 40px;
+    margin-right: 0;
+    font-size: 12px;
+    display: block;
+}
+.footer p{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+}

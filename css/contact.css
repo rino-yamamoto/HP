@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* リセット */
+a{
+    text-decoration: none;  
+}
+ul{
+    list-style: none;
+}
+
+/* 共通部分 */
+body{
+    color: #333;
+}
+main{
+    letter-spacing: 0.03em;
+}
+footer{
+    letter-spacing: 0.05em;
+}
+
+/* ヘッダー固定 */
+.header_for_pc{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: hsla(0, 0%, 100%, 0.739);
+}
+/* ヘッダー部分 */
+.header{
+    width: 100%;
+}
+.logo{
+    height: 90px;
+}
+.logo img{
+    height: 90px;
+    width: auto;
+}
+.header_for_pc{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header_nav li{
+    margin-left: 24px;
+}
+.header_nav a{
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+.header_nav a:hover{
+    color: #fb9300;
+}
+.header_nav li:first-child{
+    margin-left: 0;
+}
+
+/* メイン部分 */
+.contents{
+    max-width: 1080px;
+    padding: 200px 20px 100px;
+    margin: 0 auto;
+}
+.contents_intro{
+    text-align: center;
+    margin-bottom: 40px;
+    
+    position: relative;
+}
+.contents_intro .orange{
+    width: 188px;
+    height: auto;
+    position: absolute;
+    top: 25px;
+    right: 50%;
+    transform: translateX(50%);
+}
+.contents_intro h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.contents_text{
+    line-height: 170%;
+}
+.contents_intro p, .contents_text li>p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+sup{
+    color: #ea5550;
+}
+.contact_ul li{
+    margin-bottom: 24px;
+}
+.contact_ul li:nth-child(5){
+    margin-bottom: 40px;
+}
+.contact_ul p{
+    margin-bottom: 4px;
+}
+.contact_box{
+    border: 1px solid #D3D3D3;
+    height: 44px;
+    width: 100%;
+}
+.contact_ul li:nth-child(5) .contact_box{
+    height: 250px;
+}
+textarea {
+  resize: none;
+}
+
+/* 確認ボタン部分 */
+.contact_button{
+    text-align: center;
+    background-color: #FB9300;
+    width: 250px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.contact_button a{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 25px;
+    padding: 18px 0;
+    color: #fff;
+    display:block;
+}
+
+/* footer部分 */
+.footer>p{
+    display: none;
+}
+.footer_inner{
+    justify-content: flex-end;
+}
+.footer_inner .logo{
+    display: none;
+}
+.company_name{
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 40px 100px;
+}
+.company_name a{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    margin-right: 24px;
+    color: #333;
+}
+.company_name p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+}
+
+/* レスポンシブ対応********************************************************************** */
+/* SP */
+@media screen and (max-width: 519px) {
+/* ヘッダー部分 */
+.logo{
+    height: 60px;
+}
+.logo img{
+    height: 60px;
+}
+.header_for_pc{
+    height: 70px;
+    display: flex;
+    margin: 0 20px;
+}
+.header_nav{
+    display: none;
+}
+
+/* メイン部分 */
+.contents{
+    padding: 150px 20px 100px;
+}
+.contents_intro{
+    margin-bottom: 40px;
+}
+.contents_intro .orange{
+    width: 150px;
+    top: 20px;
+}
+.contents_intro h1{
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+.contents_intro p{
+    display: none;
+}
+
+/* 確認ボタン部分 */
+.contact_button{
+    width: 200px;
+    height: 60px;
+}
+.contact_button a{
+    font-size: 20px;
+    padding: 16px 0;
+}
+
+/* footer部分 */
+.footer{
+    padding: 10px 20px;
+}
+.footer_inner{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.footer>p{
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 40px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.footer_inner .logo{
+    display: block;
+}
+.company_name{
+    justify-content: flex-end;
+    margin: 0;
+
+}
+.company_name a{
+    font-size: 14px;
+    margin-right: 0;
+}
+.company_name p{
+    font-family: 'Noto Sans JP', sans-serif;
+    display: none;
+    font-size: 12px;
+}
+}

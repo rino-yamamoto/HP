@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* リセット */
+a{
+    text-decoration: none;  
+}
+ul{
+    list-style: none;
+}
+
+/* 共通部分 */
+body{
+    color: #333;
+}
+main{
+    letter-spacing: 0.03em;
+}
+footer{
+    letter-spacing: 0.05em;
+}
+
+/* ヘッダー固定 */
+.header_for_pc{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: hsla(0, 0%, 100%, 0.739);
+}
+/* ヘッダー部分 */
+.logo{
+    height: 90px;
+}
+.logo img{
+    height: 90px;
+    width: auto;
+}
+.header_for_pc{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header_nav li{
+    margin-left: 24px;
+}
+.header_nav a{
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+.header_nav a:hover{
+    color: #fb9300;
+}
+.header_nav li:first-child{
+    margin-left: 0;
+}
+
+/* メイン部分 */
+main{
+    margin: 0 auto;
+    line-height: 170%;
+}
+.contents{
+    padding: 200px 100px 100px;
+}
+.contents p{
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+.contents_text p:nth-child(1){
+    white-space: nowrap;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contents span{
+    color: #ea5550;
+}
+.sp_newline{
+    display: none;
+}
+
+/* footer部分 */
+.footer{
+    padding: 40px 40px 100px;
+}
+.footer>p{
+    display: none;
+}
+.footer_inner .logo{
+    display: none;
+}
+.company_name{
+    display: flex;
+    justify-content: flex-end;
+}
+.company_name a{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    margin-right: 24px;
+    color: #333;
+}
+.company_name p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+}
+
+
+/* レスポンシブ対応********************************************************************** */
+/* SP */
+@media screen and (max-width: 519px) {
+/* ヘッダー部分 */
+.header{
+}
+.logo{
+    height: 60px;
+}
+.logo img{
+    height: 60px;
+}
+.header_for_pc{
+    height: 70px;
+    margin: 0 20px;
+}
+.header_nav{
+    display: none;
+}
+
+/* メイン部分 */
+.contents{
+    padding: 150px 20px 100px;
+}
+.contents p{
+    font-size: 16px;
+}
+.contents_text p:nth-child(1){
+    font-size: 25px;
+    margin-bottom: 32px;
+}
+.sp_newline{
+    display: block;
+}
+
+/* footer部分 */
+.footer{
+    padding: 10px 20px;
+}
+.footer_inner{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.footer>p{
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 40px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.footer_inner .logo{
+    display: block;
+}
+.company_name{
+    display: block;
+    justify-content: flex-end;
+}
+.company_name a{
+    font-size: 14px;
+    margin-right: 0;
+}
+.company_name p{
+    display: none;
+    font-size: 12px;
+}
+
+}

@@ -1,0 +1,186 @@
+/* レスポンシブ対応で非表示・表示される */
+.openbtn{
+    display: none;
+}
+@media screen and (max-width: 519px) {
+    .openbtn{
+        display: block;
+    }
+}
+
+/* ******************************************************************************** */
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:-120%;
+    left:0;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	background-color:#fff;
+    /*動き*/
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    top: 0;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center; 
+}
+
+#g-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding-bottom:24px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+    font-size: 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#g-nav li:nth-child(5) a{
+    padding-bottom: 0;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top: 30px;
+	right: 24px;
+	cursor: pointer;
+    width: 16px;
+    height: 12px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    /* position: absolute; */
+    position: fixed;
+    top: 50%;
+    right: 24px;
+    /* left: 14px; */
+    /* height: 3px; */
+    height: 2px;
+	background-color: #333;
+  	width: 16px;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:30px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:35px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:40px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 31px;
+    right:24px;
+    transform: translateY(4px) rotate(-45deg);
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 40px;
+    right: 24px;
+    transform: translateY(-5px) rotate(45deg);
+}
+
+
+
+/* *************************************************************************************** */
+/* ふわっと表示させるアニメーション設定 */
+/* アニメーションスタートの遅延時間を決めるCSS*/
+.delay-time01{
+    animation-delay: 0.6s;
+    }
+    .delay-time02{
+    animation-delay: 0.4s;
+    }
+    
+    .delay-time04{
+    animation-delay: 0.2s;
+    }
+    
+    /*==================================================
+    スタート時は要素自体を透過0にするためのopacity:0;を指定する
+    ===================================*/
+    
+    .g-nav_box{
+        opacity: 0;
+    }
+    
+    /*==================================================
+    動き自体の指定：今回は「ふわっ」
+    ===================================*/
+    
+    .fadeUp {
+    animation-name:fadeUpAnime;
+    animation-duration:0.3s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* ******************************************************************** */
+    /* フェードアップ表示の指定 */
+    .fade-up{
+        opacity: 0;
+        animation: fade-up 0.5s ease-in forwards;
+    }
+    @keyframes fade-up {
+        100%{
+            opacity: 1;
+        }
+    }
+
+    /* 順番にテキストがアニメーションする */
+    .text2{
+        animation-delay: 0.3s;
+    }
+    .text3{
+        animation-delay: 0.6s;
+    }
+    .text4{
+        animation-delay: 0.9s;
+    }
+    .text5{
+        animation-delay: 1.2s;
+    }
